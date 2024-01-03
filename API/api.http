@@ -1,0 +1,44 @@
+# singup / register a new user
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": ""
+}
+
+###
+
+# Get all users from database :
+GET   http://localhost:3000/users
+
+###
+
+# user login 
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "gopi kosuri",
+  "password": "gopi@2023"
+}
+
+
+###
+
+# add sample Todo Item (jwt is req): 
+POST http://localhost:3000/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNkY2M1OTFlYTczOThiYTUyNzgiLCJpYXQiOjE3MDQyNjkwNjEsImV4cCI6MTcwNDI4MzQ2MX0.sCGSVgfjQTkZ-UdxfgOzqxJiuziPwGWPDlNYOhDAkF8
+
+{
+  "title": "SAMPLE 3",
+  "description": "testing 3",
+
+  "priority": "high"
+}
+
+###
+
+GET http://localhost:3000/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyNjkyOTIsImV4cCI6MTcwNDI4MzY5Mn0.pr3In9-nVWukTIvzX8FsAWECWp6IXweewtOG1imR0U4
